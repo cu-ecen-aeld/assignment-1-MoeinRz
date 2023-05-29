@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # error handling on parameter counts less than 2. 
 if [ $# -lt 2 ]; 
 then
