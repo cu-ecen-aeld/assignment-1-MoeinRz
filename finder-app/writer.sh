@@ -1,5 +1,5 @@
 #!/bin/bash
-# error handling on parameter counts less than 2. 
+
 if [ $# -lt 2 ]; 
 then
     echo "2 parameters required."
@@ -7,23 +7,19 @@ then
     echo "error - program terminated."
     exit 1
 else
-# input parameters assigning.
     filepath=$1
     writestr=$2
 
     pathname=`dirname $filepath`
     filename=`basename $filepath`
 
-# checkout if the directory exist. if not, it will be created.
     if [ ! -d $pathname ]; 
     then
     	echo "directory doesn't exit. it will be created."
     	mkdir -p $pathname
     fi
-# file writing
     echo $writestr > $filepath
 
-# error handling during file writing.
     if [ $? -ne 0 ]; 
     then
     	echo "error occurs during file writing."
@@ -33,6 +29,7 @@ else
 	exit 0
     fi
 fi
+
 # if [ $# -lt 2 ]; then
 #     echo "Error"
 #     exit 1
