@@ -14,10 +14,5 @@
 */
 void test_validate_my_username()
 {
-    char* expectedUsername = "MoeinRz";
-    char* actualUsername = malloc_username_from_conf_file();
-
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(expectedUsername, actualUsername, "Username validation failed.");
-
-    free(actualUsername);
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(malloc_username_from_conf_file(), my_username(), "Username does not match expected value");
 }
