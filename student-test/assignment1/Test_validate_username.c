@@ -14,5 +14,5 @@
 */
 void test_validate_my_username()
 {
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(malloc_username_from_conf_file(), my_username(), "Username does not match expected value");
-}
+	TEST_ASSERT_EQUAL_STRING (my_username(), malloc_username_from_conf_file());
+ }
