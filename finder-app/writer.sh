@@ -17,4 +17,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Successfully create the file."
+echo "Creates file:"
+echo "$w_file"
+echo "With content:"
+echo "$w_str"
